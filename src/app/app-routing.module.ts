@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  // {
+  //   path: 'part1',
+  //   loadChildren: () => import('./stepper/stepper.module').then( m => m.StepperModule)
+  // },
 ];
 
 @NgModule({
