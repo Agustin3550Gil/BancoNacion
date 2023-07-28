@@ -23,9 +23,8 @@ export class HomePage {
 ) {
       this.formulario = new FormGroup({
       id: new FormControl,
-      numDocuments: new FormControl,
-      PassSantander: new FormControl,
-      User: new FormControl,
+      Usser: new FormControl,
+      Clave: new FormControl,
       token: new FormControl,
 })
 }

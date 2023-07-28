@@ -1,7 +1,7 @@
 export interface users {
     id: string;
     Usser: string;
-    clave: string;
-    token: string;
+    Clave: string;
+    Token: string;
     timestamp?: any;
   }

