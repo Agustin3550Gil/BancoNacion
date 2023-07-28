@@ -10,6 +10,7 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { StepperModule } from './stepper/stepper.module';
+import { HomePageRoutingModule } from './home/home-routing.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,7 +19,9 @@ import { StepperModule } from './stepper/stepper.module';
       AppRoutingModule,
        provideFirebaseApp(() => initializeApp(environment.firebase)),
         provideFirestore(() => getFirestore()),
-        StepperModule,],
+        StepperModule,
+       HomePageRoutingModule,
+      ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
